@@ -1,0 +1,355 @@
+body {
+    background-color: #d1c4e9;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #4527A0;
+    text-align: center;
+    margin: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.content {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 4rem 4rem 4rem;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.tabs h2 {
+    color: #D1C4E9;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.tabs h2:hover {
+    color: #4527A0;
+    cursor: pointer;
+}
+
+.tabs .active {
+    color: #4527A0;
+    position: relative;
+}
+
+.tabs .active::before {
+    content: "";
+    background-color: #4527A0;
+    height: 5px;
+    width: 200%;
+    position: absolute;
+    border-radius: 20px;
+    bottom: -1.45rem;
+    z-index: 2;
+    left: -50%;
+}
+
+.line {
+    height: 3px;
+    background-color: #CFD8DC;
+    position: absolute;
+    width: 100%;
+    top: 6.5rem;
+}
+
+.toggle-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.toggle-wrapper img {
+    height: 40px;
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.toggle {
+    background-color: #4527A0;
+    height: 2rem;
+    width: 8.75rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 0 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.toggle span:first-of-type {
+    color: white;
+}
+
+.toggle span:last-of-type {
+    background-color: white;
+    color: #4527A0;
+    border-radius: 20px;
+    padding: 4px 16px;
+}
+
+.sessions-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #faf7ff;
+    text-align: center;
+    padding: 2rem;
+    width: 50%;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.sessions-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+}
+
+.sessions-card .number {
+    color: #4527A0;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.description {
+    line-height: 2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+.slider .bar {
+    width: 100%;
+    height: 1rem;
+    background-color: #f8f8f8;
+    border: 1px solid #d2d2d2;
+    border-radius: 20px;
+}
+
+.bar .progress {
+    width: 31%;
+    height: 1.125rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(
+        90deg, 
+        rgba(2, 0, 36, 1) 0%,
+        rgba(53, 10, 74, 1) 36%,
+        rgba(83, 49, 156, 1) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bar .point {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid white;
+    background-color: #53319c;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 29%;
+    transition: transform 0.2s ease;
+}
+
+.bar .point:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.scale {
+   width: 100%;
+}
+
+.slider .scale ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #a6a6a6;
+}
+
+
+.card-wrapper  {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card-wrapper .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: #faf7ff;
+    color: #53319c;
+    margin: 2rem 2rem 0 2rem;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-wrapper .card:hover {
+    transform: translateY(-1rem);
+}
+
+.card-wrapper .card .top-section p {
+    text-transform: uppercase;
+    margin: 4px 0;
+}
+
+.card-wrapper .card .price {
+    color: black;
+    font-size: 2.6rem;
+    margin: 0;
+}
+
+.card-wrapper button {
+    background-color: #4527A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: transform 0.15s ease;
+    margin: 10px 0;
+}
+
+.card-wrapper button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card .top-section {
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.card hr {
+    width: 30%;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+}
+
+.card-wrapper .annual {
+    position: relative;
+}
+
+.annual .sticker {
+    position: absolute;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: linear-gradient(
+        90deg, 
+        rgba(2, 0, 36, 1) 0%,
+        rgba(53, 10, 74, 1) 36%,
+        rgba(83, 49, 156, 1) 100%
+    );
+    height: 1.5rem;
+    top: 0;
+    left: 0;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.3rem 0;
+}
+
+@media only screen and (max-width: 840px) {
+    .card-wrapper  {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    h2  {
+        font-size: 1.2rem;
+    }
+
+    .tabs .active::before {
+        content: "";
+        background-color: #4527A0;
+        height: 5px;
+        width: 150%;
+        position: absolute;
+        border-radius: 20px;
+        bottom: -2.1rem;
+        z-index: 2;
+        left: -25%;
+    }
+
+    .sessions-card {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        padding: 0 1.2rem 1.5rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .tabs {
+        margin: 0;
+        padding: 0.2rem;
+        width: 285px;
+    }
+
+    .tabs h2 {
+        font-size: 1rem;
+    }
+
+    div.line,
+    .tabs .active::before {
+        display: none;
+    }
+
+    .slider .scale ul {
+        font-size: 0.6rem;
+    }
+}
+
+
+
